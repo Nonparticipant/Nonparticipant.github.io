@@ -45,13 +45,22 @@
     float: left;
   }
 
-  div#topnav ul li a {
+  div#topnav ul li a, 
+  div#topnav ul li a.dropbtn {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
+  /*
+  li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }*/
 
   div#topnav ul li a:hover:not(.active) {
     background-color: #111;
@@ -73,14 +82,6 @@
     div#topnav ul li {
       float: none;
     }
-  }
-  
-  li a, .dropbtn {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
   }
 
   li a:hover, .dropdown:hover .dropbtn {
