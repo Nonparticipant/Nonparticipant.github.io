@@ -8,6 +8,19 @@
     
 <style>
   body {margin: 0;}
+  
+  div#banner {
+    color:            white;
+    background-color: #333;
+
+  }
+
+  div#topnav {
+    background-color: #333;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+  }
 
   ul.topnav {
     list-style-type: none;
@@ -17,7 +30,9 @@
     background-color: #333;
   }
 
-  ul.topnav li {float: left;}
+  ul.topnav li {
+    float: left;
+  }
 
   ul.topnav li a {
     display: block;
@@ -27,11 +42,17 @@
     text-decoration: none;
   }
 
-  ul.topnav li a:hover:not(.active) {background-color: #111;}
+  ul.topnav li a:hover:not(.active) {
+    background-color: #111;
+  }
 
-  ul.topnav li a.active {background-color: #4CAF50;}
+  ul.topnav li a.active {
+    background-color: #4CAF50;
+  }
 
-  ul.topnav li.right {float: right;}
+  ul.topnav li.right {
+    float: right;
+  }
 
   @media screen and (max-width: 600px) {
     ul.topnav li.right, 
@@ -45,14 +66,12 @@
   
   <body>
 <!-- TITLE BANNER -->
-    <div>
-      <h1>Hello World</h1>
-    test
-      <p>Hello World</p>    
+    <div id="banner">
+      <h1>Hello World</h1> 
     </div>
     
 <!-- NAV MENU -->
-    <div>
+    <div id="topnav">
       <ul class="topnav">
         <li>
            <a class="active" href="#home">Home</a>
