@@ -66,9 +66,13 @@
   }
 
   @media screen and (max-width: 600px) {
-   /* div#topnav ul li.right, */
+    div#title {
+      display: none;
+    }
     div#topnav ul li.right, 
-    div#topnav ul li {float: none;}
+    div#topnav ul li {
+      float: none;
+    }
   }
   
   li a, .dropbtn {
@@ -130,8 +134,10 @@
   
   <body>
     <script>
+      /* fix for iOS :hover handling */
       document.addEventListener('touchstart', function() {});
     </script>  
+    
 <!-- TITLE BANNER -->
     <div id="title">
       <h1>Hello World</h1> 
@@ -139,7 +145,7 @@
     
 <!-- NAV MENU -->
     <div id="topnav">
-      <ul class="topnav">
+      <ul>
         <li>
            <a class="active" href="#home">Home</a>
         </li>
