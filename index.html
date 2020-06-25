@@ -11,7 +11,7 @@
     margin: 0;
   }
   
-  div#title {
+  header {
     color:            white;
     background-color: #333;
     margin:           0;
@@ -19,58 +19,50 @@
     padding-bottom:   5px;
   }
   
-  div#title h1 {
+  header h1 {
     margin: 0;
     padding: 0;
   }
 
-  div#topnav {
+  header ul {
     background-color: #333;
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;;
     margin: 0;
     padding: 0;
-  }
-
-  div#topnav ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
     overflow: hidden;
-    background-color: #333;
   }
 
-  div#topnav ul li {
+  header ul li {
     float: left;
   }
 
-  div#topnav ul li a, 
-  div#topnav ul li a.dropbtn {
+  header ul li a, 
+  header ul li a.dropbtn {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
-  /*
-  li a, .dropbtn {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }*/
-
-  div#topnav ul li a:hover:not(.active) {
+  
+  header ul li a:hover:not(.active) {
     background-color: #111;
   }
 
-  div#topnav ul li a.active {
+  header ul li a.active,
+  .dropdown:hover .dropbtn,
+  .dropdown-content a:hover {
     background-color: #4CAF50;
   }
 
-  div#topnav ul li.right {
+/*  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  } */
+  
+  header ul li.right {
     float: right;
   }
 
@@ -84,11 +76,11 @@
     }
   }
 
-  li a:hover, .dropdown:hover .dropbtn {
+/*  li a:hover, .dropdown:hover .dropbtn {
     background-color: red;
   }
 
-/*  li.dropdown {
+  li.dropdown {
     display: inline-block;
   } */
 
@@ -109,9 +101,6 @@
    /* text-align: left; */
   }
 
-  .dropdown-content a:hover {
-    background-color: #f1f1f1;
-  }
 
   .dropdown:hover .dropdown-content {
      display: block; 
