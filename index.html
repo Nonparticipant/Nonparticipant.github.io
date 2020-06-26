@@ -11,13 +11,13 @@
     margin: 0;
   }
   
-  header#top-banner {
+  header {
     color:            white;
     background-color: #333;
     margin:           0;
   }
   
-  header#top-banner h1 {
+  header h1 {
     font-size:  35px;
     margin: 0;
     padding:          15px;
@@ -25,8 +25,8 @@
     display: inline-block;
   }
   
-  header#top-banner span#menu-icon {
-    display: block;
+  header span {
+    display: none;
     float: right;
     height: 15px;
     margin-right: 10px;
@@ -35,7 +35,7 @@
     width: 18px;
   }
   
-  header#top-banner span#menu-icon div {
+  header span div {
     background-color: white !important;
     left: 0px;
     padding-bottom: 3px;
@@ -44,12 +44,12 @@
     width: 15px;
   }
   
-  header#top-banner span#menu-icon div#line-two {
+  header span div#line-two {
     top: 5px;
   }
   
-  header#top-banner span#menu-icon div#line-three {
-    top: 5px;
+  header span div#line-three {
+    top: 10px;
   }
 
   nav {
@@ -97,7 +97,10 @@
   }
 
   @media screen and (max-width: 600px) {
-    header {
+    header span {
+      display: block;
+    }
+    nav {
       display: none;
     }
     nav ul li.right, 
