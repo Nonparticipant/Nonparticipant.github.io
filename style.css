@@ -17,13 +17,14 @@ body header h1 {
 }
   
 body header span {
+    position: relative;
     display: none;
     float: right;
     height: 15px;
-    margin-right: 10px;
-    position: relative;
-    top: 12px;
     width: 18px;
+ /*   margin-right: 10px;
+    top: 12px; */
+    padding: 12px;
 }
   
 body header span div {
