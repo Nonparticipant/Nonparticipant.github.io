@@ -7,7 +7,7 @@
     <title>Hello World</title>
     
     <link rel="stylesheet" href="style.css">
-    <!-- <script src="script.js"></script> -->
+    <script src="script.js"></script>
   </head>
   
   <body>   
@@ -20,6 +20,7 @@
         <div id="line-three"></div>
       </span>
     </header>
+    
     
     <nav>
       <ul>
@@ -45,31 +46,7 @@
         </li>
       </ul>
     </nav>
-    
-    <script>
-      /* fix for iOS :hover handling */
-      document.addEventListener('touchstart', function() {});
-      
-      /* handler to toggle menu visibility */
-      (function(){
-        var b = document.querySelectorAll("body header span")[0];
-        var m = document.querySelectorAll("body nav")[0];
-        if (b && m) {
-          b.addEventListener('click', function(e) {
-            var m = document.querySelectorAll("body nav")[0];
-            if (m) {
-              if (m.style.display === "block") {
-                m.style.display = "none";
-              } else {
-                m.style.display = "block";
-              }  
-            }
-          });
-        }
-      })()
-    </script>  
-    
-    
+ 
 
     <main>
 
