@@ -1,16 +1,14 @@
-/*
 body {
     margin: 0;
 }
-  */
   
-header {
+body header {
     color:            white;
     background-color: #333;
     margin:           0;
 }
   
-header h1 {
+body header h1 {
     font-size:  35px;
     margin: 0;
     padding:          15px;
@@ -18,7 +16,7 @@ header h1 {
     display: inline-block;
 }
   
-header span {
+body header span {
     display: none;
     float: right;
     height: 15px;
@@ -28,7 +26,7 @@ header span {
     width: 18px;
 }
   
-header span div {
+body header span div {
     background-color: white !important;
     left: 0px;
     padding-bottom: 3px;
@@ -37,11 +35,11 @@ header span div {
     width: 15px;
 }
   
-header span div#line-two {
+body header span div#line-two {
     top: 5px;
 }
   
-header span div#line-three {
+body header span div#line-three {
     top: 10px;
 }
 
@@ -107,12 +105,12 @@ nav ul li.right {
 .dropdown:hover .dropdown-content {
      display: block; 
 }
-  /*
-div#content {
+
+body main {
     padding:  10px;
-}*/
+}
   
-footer {
+body footer {
     color:            white;
     background-color: #333;
     margin:           0;
@@ -122,26 +120,26 @@ footer {
  
  
 @media screen and (max-width: 600px) {
-  header {
+  body header {
       position: -webkit-sticky; /* Safari */
       position: sticky;
       top: 0;
   }
-  header span {
+  body header span {
       display: block;
   }
-  header h1 {
+  body header h1 {
       font-size:  25px;
       margin: 0;
       padding:          5px;
       padding-left:   10px;
       display: inline-block;
   }
-  nav {
+  body nav {
       display: none;
   }
-  nav ul li.right, 
-  nav ul li {
+  body nav ul li.right, 
+  body nav ul li {
       float: none;
   }
 }    
