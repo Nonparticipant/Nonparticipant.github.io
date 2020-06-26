@@ -75,15 +75,13 @@ body nav ul li a.dropbtn {
 /* body nav ul li.dropdown:hover .dropbtn,  
 body nav ul li.dropdown a:hover:not(.active), */
 body nav ul li.dropdown:hover,
-body nav ul li.dropdown:hover div.dropdown-content,
 body nav ul li.dropdown div.dropdown-content:hover {
     background-color: #111;
-     display: block; 
 }
-/*
+
 li.dropdown:hover div.dropdown-content {
      display: block; 
-}*/
+}
   
 body nav ul li.right {
     float: right;
