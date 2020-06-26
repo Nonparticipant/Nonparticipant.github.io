@@ -22,18 +22,16 @@ body header span {
     float: right;
     height: 15px;
     width: 18px;
- /*   margin-right: 10px;
-    top: 12px; */
     padding: 12px;
 }
   
 body header span div {
-    background-color: white !important;
-    left: 0px;
+    background-color: white;
     padding-bottom: 3px;
     position: absolute;
-    top: 0px;
     width: 15px;
+    left: 0px;
+    top: 0px;
 }
   
 body header span div#line-two {
@@ -44,7 +42,7 @@ body header span div#line-three {
     top: 10px;
 }
 
-nav {
+body nav {
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
@@ -53,67 +51,68 @@ nav {
     background-color: #333;
 }
   
-nav ul {
+body nav ul {
+    list-style-type: none;
+    overflow: hidden;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    list-style-type: none;
 }
 
-nav ul li {
+body nav ul li {
     float: left;
 }
 
-nav ul li a, 
-nav ul li a.dropbtn {
-    display: block;
-    color: white;
+body nav ul li a, 
+body nav ul li a.dropbtn {
+    text-decoration: none;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
+    display: block;
+    color: white;
 }
   
-  
-nav ul li a:hover:not(.active),
-  .dropdown:hover .dropbtn,
-  .dropdown-content a:hover {
+
+/* body nav ul li.dropdown:hover .dropbtn,  
+body nav ul li.dropdown a:hover:not(.active), */
+body nav ul li.dropdown:hover,
+body nav ul li.dropdown:hover div.dropdown-content,
+body nav ul li.dropdown div.dropdown-content:hover {
     background-color: #111;
+     display: block; 
 }
+/*
+li.dropdown:hover div.dropdown-content {
+     display: block; 
+}*/
   
-nav ul li.right {
+body nav ul li.right {
     float: right;
 }
 
 
-.dropdown-content {
-    display: none; 
-    position: absolute;
+div.dropdown-content {
     background-color: #333;
+    position: absolute;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    display: none; 
+  /*  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
     z-index: 99;
 }
 
-.dropdown-content a {
-   /* color: black; */
-    padding: 12px 16px;
+div.dropdown-content a {
     text-decoration: none;
     display: block;
-   /* text-align: left; */
+    padding: 12px 16px;
 }
 
-
-.dropdown:hover .dropdown-content {
-     display: block; 
-}
 
 body main {
     padding:  10px;
 }
   
 body footer {
-    color:            white;
     background-color: #333;
+    color:            white;
     margin:           0;
     padding:          10px; 
 }
