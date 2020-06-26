@@ -74,7 +74,7 @@ body nav ul li a.dropbtn {
 
 /* body nav ul li.dropdown:hover .dropbtn,  
 body nav ul li.dropdown a:hover:not(.active), */
-body nav ul li.dropdown:hover,
+body nav ul li:hover,
 body nav ul li.dropdown div.dropdown-content a:hover {
     background-color: #111;
 }
