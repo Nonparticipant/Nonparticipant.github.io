@@ -10,10 +10,10 @@ document.addEventListener("DOMContentLoaded", function() {
     b.addEventListener('click', function(e) {
       var m = document.querySelectorAll("body nav")[0];
       if (m) {
-        if (m.style.display === "block") {
-          m.style.display = "none";
-        } else {
+        if (m.style.display !== "block") {
           m.style.display = "block";
+        } else {
+          m.style.display = "";
         }  
       }
     });
