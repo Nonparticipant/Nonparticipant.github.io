@@ -1,0 +1,149 @@
+/*
+body {
+    margin: 0;
+}
+  */
+  
+header {
+    color:            white;
+    background-color: #333;
+    margin:           0;
+}
+  
+header h1 {
+    font-size:  35px;
+    margin: 0;
+    padding:          15px;
+    padding-bottom:   5px;
+    display: inline-block;
+}
+  
+header span {
+    display: none;
+    float: right;
+    height: 15px;
+    margin-right: 10px;
+    position: relative;
+    top: 12px;
+    width: 18px;
+}
+  
+header span div {
+    background-color: white !important;
+    left: 0px;
+    padding-bottom: 3px;
+    position: absolute;
+    top: 0px;
+    width: 15px;
+}
+  
+header span div#line-two {
+    top: 5px;
+}
+  
+header span div#line-three {
+    top: 10px;
+}
+
+nav {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+  
+nav ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style-type: none;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a, 
+nav ul li a.dropbtn {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+  
+nav ul li a:hover:not(.active),
+  .dropdown:hover .dropbtn,
+  .dropdown-content a:hover {
+    background-color: #111;
+}
+  
+nav ul li.right {
+    float: right;
+}
+
+
+.dropdown-content {
+    display: none; 
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 99;
+}
+
+.dropdown-content a {
+   /* color: black; */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+   /* text-align: left; */
+}
+
+
+.dropdown:hover .dropdown-content {
+     display: block; 
+}
+  /*
+div#content {
+    padding:  10px;
+}*/
+  
+footer {
+    color:            white;
+    background-color: #333;
+    margin:           0;
+    padding:          10px; 
+}
+ 
+ 
+ 
+@media screen and (max-width: 600px) {
+  header {
+      position: -webkit-sticky; /* Safari */
+      position: sticky;
+      top: 0;
+  }
+  header span {
+      display: block;
+  }
+  header h1 {
+      font-size:  25px;
+      margin: 0;
+      padding:          5px;
+      padding-left:   10px;
+      display: inline-block;
+  }
+  nav {
+      display: none;
+  }
+  nav ul li.right, 
+  nav ul li {
+      float: none;
+  }
+}    
+    
+    
