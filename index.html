@@ -11,36 +11,45 @@
     margin: 0;
   }
   
-  header {
+  header#top-banner {
     color:            white;
     background-color: #333;
     margin:           0;
   }
   
-  header h1 {
+  header#top-banner h1 {
     font-size:  35px;
     margin: 0;
     padding:          15px;
     padding-bottom:   5px;
+    display: inline-block;
   }
   
-  header span {
+  header#top-banner span#menu-icon {
     display: block;
     float: right;
     height: 15px;
     margin-right: 10px;
     position: relative;
-    top: 2px;
+    bottom: 10px;
     width: 18px;
   }
   
-  header span div {
+  header#top-banner span#menu-icon div {
     background-color: white !important;
     left: 0px;
     padding-bottom: 3px;
     position: absolute;
     top: 0px;
     width: 15px;
+  }
+  
+  header#top-banner span#menu-icon div#line-two {
+    top: 5px;
+  }
+  
+  header#top-banner span#menu-icon div#line-three {
+    top: 5px;
   }
 
   nav {
@@ -149,15 +158,13 @@
       document.addEventListener('touchstart', function() {});
     </script>  
     
-    <header>
+    <header id="top-banner">
       <h1>Hello World</h1> 
-      <!--
-      <img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAAUklEQVRYhe3UOwrAIBBF0UtWp2T/G9DsI6nExkpwhsA98Or5FA8kTTfwAO/hdKCuFugBw0faGHrtvOqUSswXGlCCbtLP2APp7AGlswfS2QNSig9rjvCLVGq1oAAAAABJRU5ErkJggg==" alt="Menu" />
-        -->
-      <span class="hamburger-icon">
-        <div class="hamburger-line"></div>
-        <div class="hamburger-line"></div>
-        <div class="hamburger-line"></div>
+
+      <span class="menu-icon">
+        <div></div>
+        <div id="line-two"></div>
+        <div id="line-three"></div>
       </span>
     </header>
     
