@@ -22,7 +22,9 @@ body header span {
     float: right;
     height: 15px;
     width: 18px;
-    padding: 12px;
+  /*  padding: 12px; */
+    margin-top: 10px;
+    margin-right: 10px;
 }
   
 body header span div {
