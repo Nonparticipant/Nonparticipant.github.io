@@ -28,18 +28,20 @@ body header span {
 body header span div {
     background-color: white;
     padding-bottom: 3px;
-    position: absolute;
+   /* position: absolute; */
     width: 15px;
     left: 0px;
     top: 0px;
 }
   
 body header span div#line-two {
-    top: 5px;
+   /* top: 5px; */
+    margin-top: 2px;
 }
   
 body header span div#line-three {
-    top: 10px;
+  /*  top: 10px; */
+    margin-top: 2px;
 }
 
 body nav {
