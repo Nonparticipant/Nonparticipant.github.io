@@ -55,6 +55,7 @@ nav#top-nav {
     list-style-type: none;
     padding: 0px;
     margin: 0px;
+    z-index: 1;
   }
 
   nav#top-nav ul li {
@@ -98,6 +99,7 @@ nav#top-nav {
     background-color: #333;
     position: absolute;  
     left: 0px; 
+    z-index: 2;
   }
 
   nav#top-nav > ul li ul li {
@@ -109,6 +111,7 @@ nav#top-nav {
 
   nav#top-nav > ul li ul li ul {
     top: -1px;
+    z-index: 3;
     left: 100%; 
   }
 
