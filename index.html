@@ -8,8 +8,8 @@
     
     <title>Hello World</title> 
     
-    <link rel="stylesheet" href="/style.css">
-    <script src="/script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
   </head>
   <body>   
     <header id="top-banner">
@@ -22,47 +22,115 @@
       </span>
     </header>
     
-    <nav>
-      <ul>
+    <nav id="top-nav">
+      <ul>   
+        <li class="link">
+          <a href="">Home</a>
+        </li>
         <li>
-          <a href="/index.html">Home</a>
+          Dropdown A
+          <ul>
+            <li class="link">
+              <a href="">Im a link</a>
+            </li>
+            <li class="link">
+              <a href="">Im a link</a>
+            </li>
+            <li>
+              Nested dropdown
+              <ul>
+                <li class="link">
+                  <a href="">Im a link</a>
+                </li>
+                <li class="link">
+                  <a href="">Im a link</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </li>
-        <li class="dropdown">
-          <a href="javascript:void(0)" class="dropbtn">Projects</a>
-          <div class="dropdown-content">
-            <a href="/projects/awk.html">AWK</a>
-            <a href="javascript:void(0)" class="dropbtn">C</a>
-            <div class="dropdown-content">
-              <a href="/projects/awk.html">AWK</a>
-              <a href="/projects/c.html">C</a>
-              <a href="/projects/js.html">HTML/JS</a>
-              <a href="/projects/misc.html#">Misc.</a>
-            </div>
-            <a href="/projects/js.html">HTML/JS</a>
-            <a href="/projects/misc.html#">Misc.</a>
-          </div>
+        <li>
+          Dropdown B
+          <ul>
+            <li class="link">
+              <a href="">Im a link</a>
+            </li>
+            <li class="link">
+              <a href="">Im a link</a>
+            </li>
+            <li>
+              Nested dropdown
+              <ul>
+                <li class="link">
+                  <a href="">Im a link</a>
+                </li>
+                <li class="link">
+                  <a href="">Im a link</a>
+                </li>
+                <li>
+                   Nested dropdown B
+                    <ul>
+                      <li class="link">
+                        <a href="">Im a link</a>
+                      </li>
+                      <li class="link">
+                        <a href="">Im a link</a>
+                      </li>
+                      <li>
+                        Nested dropdown C
+                        <ul>
+                          <li class="link">
+                            <a href="">Im a link</a>
+                          </li>
+                          <li class="link">
+                            <a href="">Im a link</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>             
+              </ul>
+            </li>
+          </ul>
+        </li>  
+        <li class="link right">
+          <a href="">About</a>
         </li>
-        <li class="right">
-          <a href="/about.html">About</a>
-        </li>
-      </ul>
-    </nav>
+      </ul>    </nav>
 
     <main>
-<h1>1</h1>
+<h1>Testing H1</h1>
 <p></p>
 <p>
 now <strong><em>testing</em></strong>__horizontal__ rule <strong>bold</strong>; <strong>bold</strong>in a word.</p>
-<h2></h2>
-<p></p>
 <hr />
 <p></p>
+<hr />
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus blandit, leo ac volutpat interdum, elit sapien convallis dolor, sit amet malesuada tortor urna sit amet sapien. Ut risus ante, vulputate ac iaculis vitae, pretium eget massa. Aliquam luctus ante pharetra ligula facilisis, vel consequat purus rhoncus. Suspendisse potenti. Phasellus commodo nisl vitae metus finibus, quis maximus purus gravida. Cras non tellus sodales, scelerisque nisl a, maximus leo. Phasellus at magna felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis nibh justo, eu vulputate dolor consectetur eu. Vestibulum hendrerit libero ac diam gravida convallis. Praesent convallis dolor lorem, at consectetur purus vulputate nec. Phasellus at neque felis. Donec vel diam sit amet est rhoncus suscipit sit amet fermentum tellus. Cras lacinia augue et ligula hendrerit, a venenatis nibh pulvinar. Pellentesque tincidunt nunc sit amet semper lacinia. Sed auctor felis eu tellus accumsan feugiat.</p>
+
+<p>Sed auctor volutpat ullamcorper. Proin a erat mi. Sed eu quam vestibulum, tincidunt ligula nec, volutpat dui. Integer sagittis rutrum imperdiet. Suspendisse elementum vulputate congue. Cras non enim porttitor, lacinia leo quis, euismod ipsum. Aenean sed ante eros. Nunc imperdiet nisi eu diam dapibus semper. Vestibulum sem elit, faucibus sit amet auctor at, ullamcorper vitae dui.</p>
+
+<p>Duis efficitur purus at ipsum fringilla aliquet eu a sem. Nullam consectetur tortor eget lectus accumsan aliquet eget eget turpis. Fusce sit amet enim non leo varius accumsan. Pellentesque id venenatis sem, quis pellentesque massa. Proin egestas mi massa, sit amet porttitor mauris imperdiet vitae. Praesent id libero porta, vehicula orci quis, ultricies nunc. Vestibulum rutrum vitae odio interdum vulputate. Etiam quis tortor et ante porttitor pretium. Maecenas dapibus purus vitae nunc suscipit pulvinar. Aliquam erat volutpat. Sed placerat varius quam, cursus semper metus luctus id. Sed tincidunt mauris a libero laoreet, id euismod justo vehicula.</p>
+
+<p>Fusce posuere velit vitae erat molestie, vel tempor orci porttitor. Sed eu felis vitae dui convallis consequat. Nam pharetra porttitor iaculis. Sed accumsan et lorem eu fringilla. Vivamus quis lorem venenatis, ultrices mi ut, porttitor dolor. Nullam pharetra est sit amet augue hendrerit, in ultrices est consectetur. In ultricies arcu et dolor tincidunt, non ultricies risus posuere. Nunc commodo semper leo, eu faucibus dui sollicitudin sed. Donec eu suscipit eros. Morbi at tellus ut augue luctus aliquet. Suspendisse potenti. Cras venenatis tempor interdum.</p>
+
+<p>Donec felis lorem, hendrerit vitae metus in, luctus tempus tellus. Aenean convallis, ante eget feugiat accumsan, turpis urna feugiat ligula, condimentum scelerisque tortor enim nec lectus. Nunc eros risus, finibus in blandit pretium, posuere quis mauris. Duis urna ipsum, posuere vitae ultricies et, viverra a eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam id elit semper, laoreet turpis at, mollis est. Nam tellus quam, sagittis sed molestie ut, porta ut dui. Praesent ac leo quam. Etiam imperdiet lorem eu turpis pellentesque ultrices. Nunc viverra velit non faucibus tempor. Fusce feugiat tincidunt tellus quis varius. Aenean scelerisque felis nisl, eget imperdiet arcu posuere sed. Nam varius, sapien eu feugiat egestas, diam neque facilisis erat, at dictum tellus nisl eget ligula. Maecenas ut gravida ante, ac pulvinar velit. Duis ac felis massa. Suspendisse quam est, elementum ac cursus ut, viverra sit amet dolor. </p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus blandit, leo ac volutpat interdum, elit sapien convallis dolor, sit amet malesuada tortor urna sit amet sapien. Ut risus ante, vulputate ac iaculis vitae, pretium eget massa. Aliquam luctus ante pharetra ligula facilisis, vel consequat purus rhoncus. Suspendisse potenti. Phasellus commodo nisl vitae metus finibus, quis maximus purus gravida. Cras non tellus sodales, scelerisque nisl a, maximus leo. Phasellus at magna felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis nibh justo, eu vulputate dolor consectetur eu. Vestibulum hendrerit libero ac diam gravida convallis. Praesent convallis dolor lorem, at consectetur purus vulputate nec. Phasellus at neque felis. Donec vel diam sit amet est rhoncus suscipit sit amet fermentum tellus. Cras lacinia augue et ligula hendrerit, a venenatis nibh pulvinar. Pellentesque tincidunt nunc sit amet semper lacinia. Sed auctor felis eu tellus accumsan feugiat.</p>
+
+<p>Sed auctor volutpat ullamcorper. Proin a erat mi. Sed eu quam vestibulum, tincidunt ligula nec, volutpat dui. Integer sagittis rutrum imperdiet. Suspendisse elementum vulputate congue. Cras non enim porttitor, lacinia leo quis, euismod ipsum. Aenean sed ante eros. Nunc imperdiet nisi eu diam dapibus semper. Vestibulum sem elit, faucibus sit amet auctor at, ullamcorper vitae dui.</p>
+
+<p>Duis efficitur purus at ipsum fringilla aliquet eu a sem. Nullam consectetur tortor eget lectus accumsan aliquet eget eget turpis. Fusce sit amet enim non leo varius accumsan. Pellentesque id venenatis sem, quis pellentesque massa. Proin egestas mi massa, sit amet porttitor mauris imperdiet vitae. Praesent id libero porta, vehicula orci quis, ultricies nunc. Vestibulum rutrum vitae odio interdum vulputate. Etiam quis tortor et ante porttitor pretium. Maecenas dapibus purus vitae nunc suscipit pulvinar. Aliquam erat volutpat. Sed placerat varius quam, cursus semper metus luctus id. Sed tincidunt mauris a libero laoreet, id euismod justo vehicula.</p>
+
+<p>Fusce posuere velit vitae erat molestie, vel tempor orci porttitor. Sed eu felis vitae dui convallis consequat. Nam pharetra porttitor iaculis. Sed accumsan et lorem eu fringilla. Vivamus quis lorem venenatis, ultrices mi ut, porttitor dolor. Nullam pharetra est sit amet augue hendrerit, in ultrices est consectetur. In ultricies arcu et dolor tincidunt, non ultricies risus posuere. Nunc commodo semper leo, eu faucibus dui sollicitudin sed. Donec eu suscipit eros. Morbi at tellus ut augue luctus aliquet. Suspendisse potenti. Cras venenatis tempor interdum.</p>
+
+<p>Donec felis lorem, hendrerit vitae metus in, luctus tempus tellus. Aenean convallis, ante eget feugiat accumsan, turpis urna feugiat ligula, condimentum scelerisque tortor enim nec lectus. Nunc eros risus, finibus in blandit pretium, posuere quis mauris. Duis urna ipsum, posuere vitae ultricies et, viverra a eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam id elit semper, laoreet turpis at, mollis est. Nam tellus quam, sagittis sed molestie ut, porta ut dui. Praesent ac leo quam. Etiam imperdiet lorem eu turpis pellentesque ultrices. Nunc viverra velit non faucibus tempor. Fusce feugiat tincidunt tellus quis varius. Aenean scelerisque felis nisl, eget imperdiet arcu posuere sed. Nam varius, sapien eu feugiat egestas, diam neque facilisis erat, at dictum tellus nisl eget ligula. Maecenas ut gravida ante, ac pulvinar velit. Duis ac felis massa. Suspendisse quam est, elementum ac cursus ut, viverra sit amet dolor. </p>
 <hr />
 <p></p>
     </main>
 
     <footer>
-      Last updated 2020-07-24.
+      Last updated 2020-07-25.
     </footer>
   </body>
 </html>
