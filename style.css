@@ -210,13 +210,6 @@ body footer {
         display: block;
   }
   nav#top-nav > ul li ul {
-    display: none;
-    padding: 0px;
-    top: 29px;
-    min-width: 160px;
-    background-color: #333;
-    position: initial;  
-    left: 0px; 
   }
 
   nav#top-nav > ul li ul li {
