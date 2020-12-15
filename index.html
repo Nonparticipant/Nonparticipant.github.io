@@ -148,15 +148,20 @@ small { }
           for (var i=0; i < arr.length; i++){
             if (arr[i].length == "") { continue; } // skip blank
             if (arr[i].match(/^(#)+[ ]/)) {
+              console.log("headers: " + arr[i]);
               arr[i] = arr[i].replace(/^####[ ]?(.*?)/gi, '<h4>$1</h4>'); // h4
               arr[i] = arr[i].replace(/^###[ ]?(.*?)/gi, '<h3>$1</h3>'); // h3
               arr[i] = arr[i].replace(/^##[ ]?(.*?)/gi, '<h2>$1</h2>'); // h2
               arr[i] = arr[i].replace(/^#[ ]?(.*?)/gi, '<h1>$1</h1>'); // h1
+              console.log("output: " + arr[i]);
               out += arr[i];
             } else {
+              console.log("non-headers: " + arr[i]);
               arr[i] = arr[i].replace(/\*\*(.*?)\*\*/gi, '<span style="font-weight: bold">$1</span>'); // bold
               arr[i] = arr[i].replace(/\*(.*?)\*/gi, '<span style="font-style: italic">$1</span>')  // ital
               arr[i] = arr[i].replace(/\[(.*?)\]\((.*?)\)/gi, '<a href="$2">$1</a>'); //links
+              
+              console.log("output: " + arr[i]);
               out += "<p>"+arr[i]+"</p>";
             }
           }
