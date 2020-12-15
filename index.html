@@ -189,30 +189,33 @@ small { }
       <script>
         (function (){
           function parseMD(str) {
+            var out = "";
             var arr = str.split(/\r?\n/);
+            
             for (var i=1; i < arr.length; i++){
               var match = null;
               match = arr[i].match(/\*\*[^*]+\*\*/)
               if ( match ) {
                 console.log("bold: " + match );
                 match = null;
-              }
+              } else
               match = arr[i].match(/[^*]\*[^*]+\*[^*]/)
               if ( match ) {
                 console.log("ital: " + match );
                 match = null;
               }
               
-              
+              out += "str";
             }
+            
+            return out;
           }
         
           var xhttp = new XMLHttpRequest();
           xhttp.onreadystatechange = function() {
             var m = (document.querySelectorAll('main'))[0];
             if (this.readyState == 4 && this.status == 200 && m) {
-              m.innerHTML = xhttp.responseText;
-              parseMD(xhttp.responseText);
+              m.innerHTML = parseMD( xhttp.responseText );
             } else {
               //handle fail
             }
