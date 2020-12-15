@@ -2,8 +2,10 @@
 
 <script>
   function getChunk(filename, target){
+    print("getChunk: "+filename+"    "+target);
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
+      print("response");
       if (this.readyState == 4 && this.status == 200) {
         // Typical action to be performed when the document is ready:
         document.getElementById(target).innerHTML = xhttp.responseText;
@@ -12,10 +14,16 @@
     xhttp.open("GET", window.location.protocol+"//"+window.location.hostname+"/"+filename, true);
     xhttp.send();
   }
+  
+  function print(text) {
+    document.getElementById("console").innerHTML+= text + "</br>";
+  }
 
-  getChunk("test.txt", "targ")
+  getChunk("test.txt", "targ");
 </script>
 
 
   <div id="targ"></div>
+  
+  <div id="console"></div>
 <html>
