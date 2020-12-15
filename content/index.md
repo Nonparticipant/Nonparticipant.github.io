@@ -2,8 +2,8 @@
 
 **this is a test**
 
-***nested* stuff**
+***nested* _stuff_**
 
 ***more***
 
-this is a link [Google](https://www.google.com) done
+this __is a__ link [Google](https://www.google.com) done
