@@ -201,7 +201,7 @@ small { }
               if ( match ) {
                 console.log("bold: " + match );
                 match = null;
-              } else
+              } 
               match = arr[i].match(/([^*]|\*\*)\*[^*]+\*([^*]|\*\*)/)
               if ( match ) {
                 console.log("ital: " + match );
@@ -212,7 +212,7 @@ small { }
                 console.log("retesting");
                 continue;
               }
-              out += "<p>"+str+"</p>";
+              out += "<p>"+arr[i]+"</p>";
             }
             
             return out;
