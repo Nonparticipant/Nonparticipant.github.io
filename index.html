@@ -191,7 +191,9 @@ small { }
           function parseMD(str) {
             var arr = str.split(/\r?\n/);
             for (var i=1; i < arr.length; i++){
-              console.log(arr[i].match(/\*[^*]+\*/));
+              console.log("bold: " + arr[i].match(/\*\*[^*]+\*\*/));
+              
+              console.log("ital: " + arr[i].match(/[^*]\*[^*]+\*[^*]/));
             }
           }
         
