@@ -197,6 +197,7 @@ small { }
               
               arr[i] = arr[i].replace(/\*\*(.*?)\*\*/gi, '<span style="font-weight: bold">$1</span>'); // bold
               arr[i] = arr[i].replace(/\*(.*?)\*/gi, '<span style="font-style: italic">$1</span>')  // ital
+              arr[i] = arr[i].replace(/\[(.*?)\]\((.*?)\)/gi, '<a href="$2">$1</a>'); //links
               
               console.log("output: " +arr[i]);
               
