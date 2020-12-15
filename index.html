@@ -191,9 +191,15 @@ small { }
           function parseMD(str) {
             var arr = str.split(/\r?\n/);
             for (var i=1; i < arr.length; i++){
-              console.log("bold: " + arr[i].match(/\*\*[^*]+\*\*/));
+              var match = null;
+              if ( ( var match = arr[i].match(/\*\*[^*]+\*\*/) ) ) {
+                console.log("bold: " + match );
+              }
+              if ( ( var match = arr[i].match(/[^*]\*[^*]+\*[^*]/) ) ) {
+                console.log("ital: " + match );
+              }
               
-              console.log("ital: " + arr[i].match(/[^*]\*[^*]+\*[^*]/));
+              
             }
           }
         
