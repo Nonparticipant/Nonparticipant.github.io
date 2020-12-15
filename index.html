@@ -157,8 +157,10 @@ small { }
               out += arr[i];
             } else {
               console.log("non-headers: " + arr[i]);
-              arr[i] = arr[i].replace(/\*\*(.*?)\*\*/gi, '<span style="font-weight: bold">$1</span>'); // bold
+              arr[i] = arr[i].replace(/\*\*([^*]+)\*\*/gi, '<span style="font-weight: bold">$1</span>'); // bold
+              arr[i] = arr[i].replace(/__(.*?)__/gi, '<span style="font-weight: bold">$1</span>'); // bold
               arr[i] = arr[i].replace(/\*(.*?)\*/gi, '<span style="font-style: italic">$1</span>')  // ital
+              arr[i] = arr[i].replace(/_(.*?)_/gi, '<span style="font-style: italic">$1</span>')  // ital
               arr[i] = arr[i].replace(/\[(.*?)\]\((.*?)\)/gi, '<a href="$2">$1</a>'); //links
               
               console.log("output: " + arr[i]);
