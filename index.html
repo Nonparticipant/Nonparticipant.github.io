@@ -174,14 +174,16 @@ small { }
           var anc = document.getElementsByTagName('a');
           for (var i=0; i < anc.length; i++) {
             if ( anc[i].href.match(/#[A-z]+$/) ) {
-              anc[i].addEventListener("click", function (ev) { 
-                ev.preventDefault(); 
-                console.log(window.location.hash);
-                console.log(window.location.path);
-                console.log(window.location.href);
+              (function(){
+                anc[i].addEventListener("click", function (ev) { 
+                  ev.preventDefault(); 
+                  console.log(window.location.hash);
+                  console.log(window.location.path);
+                  console.log(window.location.href);
                 
                // window.location.replace(""); 
-                return false; 
+                  return false; 
+                })();
               });
             };
           }
