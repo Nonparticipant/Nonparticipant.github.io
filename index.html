@@ -171,6 +171,12 @@ small { }
           } else {
             //handle fail
           }
+          var anc = document.getElementsByTagName('a');
+          for (var i=0; i < anc.length; i++) {
+            anc[i].onclick = function () { 
+              console.log(this);
+            };
+          }
         };
         var path = window.location.protocol+"//"+window.location.hostname+"/content/";
         if ( window.location.hash.substr(1).length == 0 ) {
