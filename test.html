@@ -20,13 +20,11 @@
     xhttp.open("GET", window.location.protocol+"//"+window.location.hostname+"/"+filename, true);
     xhttp.send();
   }
-
   
   getChunk("shared/head.txt", "head");
   getChunk("shared/header.txt", "top-banner");
   getChunk("shared/nav.txt", "top-nav");
   getChunk("shared/footer.txt", "footer");
-  
   getChunk("content/test.txt", "content");
 </script>
 
