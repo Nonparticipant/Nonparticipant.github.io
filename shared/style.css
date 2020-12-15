@@ -66,7 +66,7 @@ nav#top-nav ul li,
 nav#top-nav ul li a {
     color: #ffffff;
     display: inline-block;
-    cursor: pointer;
+    cursor: default;
     text-decoration: none;
     white-space: nowrap;
 }
@@ -80,6 +80,7 @@ nav#top-nav ul li a,
 nav#top-nav ul li a a {
     height: 100%;
     width: 100%;
+    cursor: default;
 }
 
 nav#top-nav > ul {
@@ -110,7 +111,7 @@ nav#top-nav > ul li ul li {
 }
 
 nav#top-nav > ul li ul li ul {
-    top: -1px;
+    top: 0px;
     z-index: 3;
     left: 100%; 
 }
@@ -150,16 +151,36 @@ nav#top-nav > ul li ul li.dropdown::before {
 }
   
 
-body main {
+body > main {
     padding:  10px;
+    max-width: 100ch;
+    margin: auto;
 }
-body footer {
+
+body > main h1,
+body > main h2 {
+    margin:     10px 0px;
+}
+body > main p {
+    margin:     10px 0px 20px 0px;
+    
+}
+/*
+h1, h2, h3, h4, h5, h6 {  }
+p { }
+ol, ul { }
+a { }
+blockquote { } 
+pre, code { }
+small { }
+*/
+body > footer {
     background-color: #333;
     color:            white;
     margin:           0;
     padding:          10px; 
+    margin-top:       40px;
 }
- 
  
  
 @media screen and (max-width: 600px) {
