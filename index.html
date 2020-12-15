@@ -66,28 +66,6 @@ small { }
         nav#top-nav > ul li ul li ul { top: -1px; left: 100%; }
       }
     </style>
-    
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        /* fix for iOS :hover handling */
-        document.addEventListener('touchstart', function() {});
-        /* handler to toggle menu visibility */
-        var b = document.querySelectorAll("body header span")[0];
-        var m = document.querySelectorAll("body nav")[0];
-        if (b && m) {
-          b.addEventListener('click', function(e) {
-            var m = document.querySelectorAll("body nav")[0];
-            if (m) {
-              if (m.style.display !== "block") {
-                m.style.display = "block";
-              } else {
-                m.style.display = "";
-              }  
-            }
-          });
-        }
-      });
-    </script>
   </head>
   
   <body>   
@@ -161,45 +139,61 @@ small { }
       Last updated 2020-07-25.
     </footer>
     
-      <script>
-        (function (){
-          function parseMD(str) {
-            var out = "";
-            var arr = str.split(/\r?\n/);
+    <script>
+      (function (){
+        function parseMD(str) {
+          var out = "";
+          var arr = str.split(/\r?\n/);
             
-            for (var i=0; i < arr.length; i++){
-              if (arr[i].length == 0) { continue; } // skip blank
-              arr[i] = arr[i].replace(/^####(.*?)/gi, '<h4>$1</h4>'); // h4
-              arr[i] = arr[i].replace(/^###(.*?)/gi, '<h3>$1</h3>'); // h3
-              arr[i] = arr[i].replace(/^##(.*?)/gi, '<h2>$1</h2>'); // h2
-              arr[i] = arr[i].replace(/^#(.*?)/gi, '<h1>$1</h1>'); // h1
-              arr[i] = arr[i].replace(/\*\*(.*?)\*\*/gi, '<span style="font-weight: bold">$1</span>'); // bold
-              arr[i] = arr[i].replace(/\*(.*?)\*/gi, '<span style="font-style: italic">$1</span>')  // ital
-              arr[i] = arr[i].replace(/\[(.*?)\]\((.*?)\)/gi, '<a href="$2">$1</a>'); //links
-              out += "<p>"+arr[i]+"</p>";
-            }
-            
-            return out;
+          for (var i=0; i < arr.length; i++){
+            if (arr[i].length == 0) { continue; } // skip blank
+            arr[i] = arr[i].replace(/^####(.*?)/gi, '<h4>$1</h4>'); // h4
+            arr[i] = arr[i].replace(/^###(.*?)/gi, '<h3>$1</h3>'); // h3
+            arr[i] = arr[i].replace(/^##(.*?)/gi, '<h2>$1</h2>'); // h2
+            arr[i] = arr[i].replace(/^#(.*?)/gi, '<h1>$1</h1>'); // h1
+            arr[i] = arr[i].replace(/\*\*(.*?)\*\*/gi, '<span style="font-weight: bold">$1</span>'); // bold
+            arr[i] = arr[i].replace(/\*(.*?)\*/gi, '<span style="font-style: italic">$1</span>')  // ital
+            arr[i] = arr[i].replace(/\[(.*?)\]\((.*?)\)/gi, '<a href="$2">$1</a>'); //links
+            out += "<p>"+arr[i]+"</p>";
           }
+          return out;
+        }
         
-          var xhttp = new XMLHttpRequest();
-          xhttp.onreadystatechange = function() {
-            var m = (document.querySelectorAll('main'))[0];
-            if (this.readyState == 4 && this.status == 200 && m) {
-              m.innerHTML = parseMD( xhttp.responseText );
-            } else {
-              //handle fail
-            }
-          };
-          var path = window.location.protocol+"//"+window.location.hostname+"/content/";
-          if ( window.location.hash.substr(1).length == 0 ) {
-            path += "index.md";
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          var m = (document.querySelectorAll('main'))[0];
+          if (this.readyState == 4 && this.status == 200 && m) {
+            m.innerHTML = parseMD( xhttp.responseText );
           } else {
-            path += ( window.location.hash.substr(1)+ ".md");
+            //handle fail
           }
-          xhttp.open("GET", path, true);
-          xhttp.send();
-
+        };
+        var path = window.location.protocol+"//"+window.location.hostname+"/content/";
+        if ( window.location.hash.substr(1).length == 0 ) {
+          path += "index.md";
+        } else {
+          path += ( window.location.hash.substr(1)+ ".md");
+        }
+        xhttp.open("GET", path, true);
+        xhttp.send();
+          
+        /* fix for iOS :hover handling */
+        document.addEventListener('touchstart', function() {});
+        /* handler to toggle menu visibility */
+        var b = document.querySelectorAll("body header span")[0];
+        var m = document.querySelectorAll("body nav")[0];
+        if (b && m) {
+          b.addEventListener('click', function(e) {
+            var m = document.querySelectorAll("body nav")[0];
+            if (m) {
+              if (m.style.display !== "block") {
+                m.style.display = "block";
+              } else {
+                m.style.display = "";
+              }  
+            }
+          });
+        }
       })();  
     </script>
   </body>
