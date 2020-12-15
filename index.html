@@ -193,25 +193,13 @@ small { }
             var arr = str.split(/\r?\n/);
             
             for (var i=0; i < arr.length; i++){
-              var match = null, retest = false;
-              
               console.log("testing: " + arr[i]);
               
-              match = arr[i].match(/\*\*[^*]+\*\*/)
-              if ( match ) {
-                console.log("bold: " + match );
-                match = null;
-              } 
-              match = arr[i].match(/([^*]|\*\*)\*[^*]+\*([^*]|\*\*)/)
-              if ( match ) {
-                console.log("ital: " + match );
-                match = null;
-              }
-              if (retest) {
-                i--;
-                console.log("retesting");
-                continue;
-              }
+              arr[i] = arr[i].replace(/\*\*([^*])+\*\*/gi, '<span style="font-weight: bold">$1</span>'); // bold
+              arr[i] = arr[i].replace(/\*([^*]+)\*/gi, '<span style="font-style: italic">$1</span>');  // ital
+              
+              console.log("output: " +arr[i]);
+              
               out += "<p>"+arr[i]+"</p>";
             }
             
