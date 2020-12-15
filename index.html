@@ -186,24 +186,30 @@ small { }
       Last updated 2020-07-25.
     </footer>
     
-    <script>
-      (function (){
-        function parseMD(str){
+      <script>
+        (function (){
+          function parseMD(str){
         
-        }
-        
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          var m = (document.querySelectorAll('main'))[0];
-          if (this.readyState == 4 && this.status == 200 && m) {
-            m.innerHTML = xhttp.responseText;
-          } else {
-            //handle fail
           }
-    };
-    xhttp.open("GET", window.location.protocol+"//"+window.location.hostname+"/content/"+window.location.hash.substr(1)+".md", true);
-    xhttp.send();
-  }
+        
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            var m = (document.querySelectorAll('main'))[0];
+            if (this.readyState == 4 && this.status == 200 && m) {
+              m.innerHTML = xhttp.responseText;
+            } else {
+              //handle fail
+            }
+          };
+          var path = window.location.protocol+"//"+window.location.hostname+"/content/";
+          if ( window.location.hash.substr(1).length == 0 ) {
+            path += "index.md";
+          } else {
+            path += ( window.location.hash.substr(1)+ ".md");
+          }
+          xhttp.open("GET", path, true);
+          xhttp.send();
+        }
       })();  
     </script>
   </body>
