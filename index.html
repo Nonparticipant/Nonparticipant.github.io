@@ -169,6 +169,10 @@ small { }
             
             for (var i=0; i < arr.length; i++){
               if (arr[i].length == 0) { continue; } // skip blank
+              arr[i] = arr[i].replace(/^####(.*?)/gi, '<h4>$1</h4>'); // h4
+              arr[i] = arr[i].replace(/^###(.*?)/gi, '<h3>$1</h3>'); // h3
+              arr[i] = arr[i].replace(/^##(.*?)/gi, '<h2>$1</h2>'); // h2
+              arr[i] = arr[i].replace(/^#(.*?)/gi, '<h1>$1</h1>'); // h1
               arr[i] = arr[i].replace(/\*\*(.*?)\*\*/gi, '<span style="font-weight: bold">$1</span>'); // bold
               arr[i] = arr[i].replace(/\*(.*?)\*/gi, '<span style="font-style: italic">$1</span>')  // ital
               arr[i] = arr[i].replace(/\[(.*?)\]\((.*?)\)/gi, '<a href="$2">$1</a>'); //links
