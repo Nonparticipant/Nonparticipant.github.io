@@ -1,74 +1,44 @@
       <ul>   
-        <li class="link">
-          <a href="">Home</a>
+        <li>
+          <a href="/">Home</a>
         </li>
         <li>
-          Dropdown A
+          <a href="/rants.html">Rants</a>
+        </li>
+        <li class="dropdown">
+          Stuff
           <ul>
-            <li class="link">
-              <a href="">Im a link</a>
-            </li>
-            <li class="link">
-              <a href="">Im a link</a>
+            <li>
+              <a href="\stuff\books.html">Books</a>
             </li>
             <li>
-              Nested dropdown
-              <ul>
-                <li class="link">
-                  <a href="">Im a link</a>
-                </li>
-                <li class="link">
-                  <a href="">Im a link</a>
-                </li>
-              </ul>
+              <a href="\stuff\videos.html">Videos</a>
             </li>
           </ul>
         </li>
-        <li>
-          Dropdown B
+        <li class="dropdown">
+          Projects
           <ul>
-            <li class="link">
-              <a href="">Im a link</a>
-            </li>
-            <li class="link">
-              <a href="">Im a link</a>
+            <li>
+              <a href="/projects/awk.html">AWK</a>
             </li>
             <li>
-              Nested dropdown
+              <a href="/projects/C.html">C</a>
+            </li>
+            <li class="dropdown">
+              JS
               <ul>
-                <li class="link">
-                  <a href="">Im a link</a>
-                </li>
-                <li class="link">
-                  <a href="">Im a link</a>
-                </li>
                 <li>
-                   Nested dropdown B
-                    <ul>
-                      <li class="link">
-                        <a href="">Im a link</a>
-                      </li>
-                      <li class="link">
-                        <a href="">Im a link</a>
-                      </li>
-                      <li>
-                        Nested dropdown C
-                        <ul>
-                          <li class="link">
-                            <a href="">Im a link</a>
-                          </li>
-                          <li class="link">
-                            <a href="">Im a link</a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>             
+                  <a href="/projects/js_hexed.html">hexEd</a>
+                </li>
               </ul>
             </li>
           </ul>
-        </li>  
-        <li class="link right">
-          <a href="">About</a>
         </li>
-      </ul>
+        <li>
+          <a href="/links.html">Links</a>
+        </li>
+        <li class="right">
+          <a href="/about.html">About</a>
+        </li>
+      </ul> 
