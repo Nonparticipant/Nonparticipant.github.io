@@ -168,24 +168,24 @@ small { }
           var m = (document.querySelectorAll('main'))[0];
           if (this.readyState == 4 && this.status == 200 && m) {
             m.innerHTML = parseMD( xhttp.responseText );
-          } else {
-            //handle fail
-          }
-          var anc = document.getElementsByTagName('a');
-          for (var i=0; i < anc.length; i++) {
-            if ( anc[i].href.match(/#[A-z]+$/) ) {
-              console.log(anc[i]);
-                anc[i].addEventListener("click", function (ev) { 
-                  console.log(ev);
-                  ev.preventDefault(); 
-                  console.log(window.location.hash);
-                  console.log(window.location.pathname);
-                  console.log(window.location.href);
+            var anc = document.getElementsByTagName('a');
+            for (var i=0; i < anc.length; i++) {
+              if ( anc[i].href.match(/#[A-z]+$/) ) {
+                console.log(anc[i]);
+                  anc[i].addEventListener("click", function (ev) { 
+                    console.log(ev);
+                    ev.preventDefault(); 
+                    console.log(window.location.hash);
+                    console.log(window.location.pathname);
+                    console.log(window.location.href);
                 
                // window.location.replace(""); 
-                  return false; 
-              });
-            };
+                    return false; 
+                });
+              };
+            }
+          } else {
+            //handle fail
           }
         };
         var path = window.location.protocol+"//"+window.location.hostname+"/content/";
