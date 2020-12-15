@@ -192,8 +192,11 @@ small { }
             var out = "";
             var arr = str.split(/\r?\n/);
             
-            for (var i=1; i < arr.length; i++){
-              var match = null;
+            for (var i=0; i < arr.length; i++){
+              var match = null, retest = false;
+              
+              console.log("testing: " + arr[i]);
+              
               match = arr[i].match(/\*\*[^*]+\*\*/)
               if ( match ) {
                 console.log("bold: " + match );
@@ -204,8 +207,12 @@ small { }
                 console.log("ital: " + match );
                 match = null;
               }
-              
-              out += "str";
+              if (retest) {
+                i--;
+                console.log("retesting");
+                continue;
+              }
+              out += "<p>"+str+"</p>";
             }
             
             return out;
