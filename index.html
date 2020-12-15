@@ -173,7 +173,7 @@ small { }
           }
           var anc = document.getElementsByTagName('a');
           for (var i=0; i < anc.length; i++) {
-            if ( anc[i].href.match(/^#[A-z]+/) ) {
+            if ( anc[i].href.match(/#[A-z]+$/) ) {
               anc[i].addEventListener("click", function (ev) { 
                 ev.preventDefault(); 
                 console.log(window.location.hash);
