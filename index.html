@@ -173,13 +173,14 @@ small { }
               if ( anc[i].href.match(/#[A-z]+$/) ) {
                 console.log(anc[i]);
                   anc[i].addEventListener("click", function (ev) { 
-                    console.log(ev);
+                  //  console.log(ev);
                     ev.preventDefault(); 
-                    console.log(window.location.hash);
-                    console.log(window.location.pathname);
-                    console.log(window.location.href);
-                
-               // window.location.replace(""); 
+                   // console.log(window.location.hash);
+                  //  console.log(window.location.pathname);
+                  //  console.log(window.location.href);
+                    //var path = window.location.href.replace(/#[A-z]+$/, "");
+                    window.location.assign(ev.target.href); 
+                    window.location.reload();
                     return false; 
                 });
               };
