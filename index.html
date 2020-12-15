@@ -175,7 +175,8 @@ small { }
         <li class="link right">
           <a href="">About</a>
         </li>
-      </ul>    </nav>
+      </ul>    
+    </nav>
 
     <main>
       
@@ -186,8 +187,24 @@ small { }
     </footer>
     
     <script>
-    (function (){alert("test");})();  
-      
+      (function (){
+        function parseMD(str){
+        
+        }
+        
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          var m = (document.querySelectorAll('main'))[0];
+          if (this.readyState == 4 && this.status == 200 && m) {
+            m.innerHTML = xhttp.responseText;
+          } else {
+            //handle fail
+          }
+    };
+    xhttp.open("GET", window.location.protocol+"//"+window.location.hostname+"/content/"+window.location.hash.substr(1)+".md", true);
+    xhttp.send();
+  }
+      })();  
     </script>
   </body>
 </html>
