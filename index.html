@@ -173,8 +173,12 @@ small { }
           }
           var anc = document.getElementsByTagName('a');
           for (var i=0; i < anc.length; i++) {
-            anc[i].onclick = function () { 
-              console.log(this);
+            if ( anc[i].href.match(/^#[A-z]+/) ) {
+              anc[i].addEventListener("click", function (ev) { 
+                ev.preventDefault(); 
+                window.location.replace(""); 
+                return false; 
+              });
             };
           }
         };
