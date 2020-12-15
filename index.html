@@ -202,7 +202,7 @@ small { }
                 console.log("bold: " + match );
                 match = null;
               } else
-              match = arr[i].match(/[^*]\*[^*]+\*[^*]/)
+              match = arr[i].match(/([^*]|\*\*)\*[^*]+\*([^*]|\*\*)/)
               if ( match ) {
                 console.log("ital: " + match );
                 match = null;
