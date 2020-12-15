@@ -193,14 +193,10 @@ small { }
             var arr = str.split(/\r?\n/);
             
             for (var i=0; i < arr.length; i++){
-              console.log("testing: " + arr[i]);
-              
+              if (arr[i].length == 0) { continue; } // skip blank
               arr[i] = arr[i].replace(/\*\*(.*?)\*\*/gi, '<span style="font-weight: bold">$1</span>'); // bold
               arr[i] = arr[i].replace(/\*(.*?)\*/gi, '<span style="font-style: italic">$1</span>')  // ital
               arr[i] = arr[i].replace(/\[(.*?)\]\((.*?)\)/gi, '<a href="$2">$1</a>'); //links
-              
-              console.log("output: " +arr[i]);
-              
               out += "<p>"+arr[i]+"</p>";
             }
             
