@@ -189,7 +189,10 @@ small { }
       <script>
         (function (){
           function parseMD(str) {
-        
+            var arr = str.split(/\r?\n/);
+            for (var i=1; i < arr.length; i++){
+              console.log(arr[i].match(/\*[^*]+\*/));
+            }
           }
         
           var xhttp = new XMLHttpRequest();
@@ -197,6 +200,7 @@ small { }
             var m = (document.querySelectorAll('main'))[0];
             if (this.readyState == 4 && this.status == 200 && m) {
               m.innerHTML = xhttp.responseText;
+              parseMD(xhttp.responseText);
             } else {
               //handle fail
             }
