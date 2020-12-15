@@ -6,4 +6,4 @@ this is the index
 
 ***more***
 
-this is a link [Google](www.google.com) done
+this is a link [Google](https://www.google.com) done
