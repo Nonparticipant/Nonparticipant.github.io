@@ -176,7 +176,11 @@ small { }
             if ( anc[i].href.match(/^#[A-z]+/) ) {
               anc[i].addEventListener("click", function (ev) { 
                 ev.preventDefault(); 
-                window.location.replace(""); 
+                console.log(window.location.hash);
+                console.log(window.location.path);
+                console.log(window.location.href);
+                
+               // window.location.replace(""); 
                 return false; 
               });
             };
