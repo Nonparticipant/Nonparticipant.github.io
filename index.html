@@ -149,10 +149,10 @@ small { }
             if (arr[i].length == "") { continue; } // skip blank
             if (arr[i].match(/^(#)+[ ]/)) {
               console.log("headers: " + arr[i]);
-              arr[i] = arr[i].replace(/^####[ ]?(.*?)/gi, '<h4>$1</h4>'); // h4
-              arr[i] = arr[i].replace(/^###[ ]?(.*?)/gi, '<h3>$1</h3>'); // h3
-              arr[i] = arr[i].replace(/^##[ ]?(.*?)/gi, '<h2>$1</h2>'); // h2
-              arr[i] = arr[i].replace(/^#[ ]?(.*?)/gi, '<h1>$1</h1>'); // h1
+              arr[i] = arr[i].replace(/^####[ ]?(.*?)$/gi, '<h4>$1</h4>'); // h4
+              arr[i] = arr[i].replace(/^###[ ]?(.*?)$/gi, '<h3>$1</h3>'); // h3
+              arr[i] = arr[i].replace(/^##[ ]?(.*?)$/gi, '<h2>$1</h2>'); // h2
+              arr[i] = arr[i].replace(/^#[ ]?(.*?)$/gi, '<h1>$1</h1>'); // h1
               console.log("output: " + arr[i]);
               out += arr[i];
             } else {
